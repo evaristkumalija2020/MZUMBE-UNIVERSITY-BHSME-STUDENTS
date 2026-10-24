@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BHSME Student Registration</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f9;
+  margin: 0;
+  padding: 20px;
+  color: #243047;
+}
+
+.container {
+  max-width: 550px;
+  margin: 30px auto;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px #00000015;
+}
+
+h1 {
+  text-align: center;
+  color: #073b78;
+}
+
+p {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #ccd5e1;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background: #073b78;
+  color: white;
+  border: none;
+  padding: 14px;
+  margin-top: 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0b579d;
+}
+
+#message {
+  margin-top: 18px;
+  text-align: center;
+  color: #073b78;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #073b78;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Student Registration</h1>
+  <p>MZUMBE UNIVERSITY – BHSME STUDENTS</p>
+
+  <form id="registrationForm">
+
+    <label for="fullname">Full Name</label>
+    <input id="fullname" name="fullname"
+      type="text" required>
+
+    <label for="regno">Registration Number</label>
+    <input id="regno" name="regno"
+      type="text" required>
+
+    <label for="year">Year of Study</label>
+    <select id="year" name="year" required>
+      <option value="">Select year</option>
+      <option>Year 1</option>
+      <option>Year 2</option>
+      <option>Year 3</option>
+      <option>Year 4</option>
+    </select>
+
+    <label for="email">Email Address</label>
+    <input id="email" name="email"
+      type="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input id="phone" name="phone"
+      type="tel" required>
+
+    <label for="password">Create Password</label>
+    <input id="password" name="password"
+      type="password" minlength="8" required>
+
+    <label for="confirm">Confirm Password</label>
+    <input id="confirm" name="confirm"
+      type="password" minlength="8" required>
+
+    <button type="submit">Register Student</button>
+
+    <div id="message" role="status"></div>
+  </form>
+
+  <a class="back" href="index.html">Back to Home</a>
+</div>
+
+<script>
+const form = document.getElementById("registrationForm");
+const message = document.getElementById("message");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const password = document.getElementById("password").value;
+  const confirm = document.getElementById("confirm").value;
+
+  if (password !== confirm) {
+    message.textContent = "Passwords do not match.";
+    return;
+  }
+
+  message.textContent =
+    "The form is ready, but registration has not been saved. Connect a secure server to complete registration.";
+});
+</script>
+
+</body>
+</html>
