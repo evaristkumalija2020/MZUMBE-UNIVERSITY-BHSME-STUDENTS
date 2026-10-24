@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mzumbe University | BHSME Students</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f4f7fb;color:#243047;line-height:1.6}
+header{background:#073b78;color:white;padding:22px 6%}
+header h1{font-size:25px}
+header p{color:#ffce45}
+nav{background:#052c59;padding:14px 6%;display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none}
+nav a:hover{color:#ffce45}
+.hero{background:linear-gradient(120deg,#073b78,#087caa);color:white;padding:65px 7%;text-align:center}
+.hero h2{font-size:clamp(28px,4vw,42px);margin-bottom:15px}
+.hero p{max-width:700px;margin:0 auto 22px}
+.btn{display:inline-block;background:#ffce45;color:#073b78;padding:11px 20px;text-decoration:none;border-radius:6px;font-weight:bold}
+.container{max-width:1100px;margin:auto;padding:35px 20px}
+.section-title{text-align:center;color:#073b78;margin-bottom:25px}
+.search{width:100%;padding:14px;border:1px solid #ccd5e1;border-radius:7px;margin-bottom:25px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:white;padding:22px;border-radius:10px;box-shadow:0 3px 12px #0000000d;border-top:4px solid #ffce45}
+.card h3{color:#073b78;margin-bottom:10px}
+.card a{color:#0756a0}
+.emoji{font-size:30px}
+.notice{background:#fff8df;padding:18px;border-radius:8px;margin-bottom:22px}
+footer{background:#052c59;color:white;text-align:center;padding:25px;margin-top:25px}
+@media(max-width:600px){header,nav{padding:18px 5%}nav{gap:14px}.hero{padding:45px 6%}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MZUMBE UNIVERSITY</h1>
+  <p>Bachelor of Health Systems in Monitoring and Evaluation</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#announcements">Announcements</a>
+  <a href="#resources">Study Resources</a>
+  <a href="#links">Useful Links</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+  <h2>Welcome BHSME Students</h2>
+  <p>
+    A student information platform for sharing academic
+    resources, announcements, research opportunities and
+    important learning links.
+  </p>
+  <a class="btn" href="#resources">Explore Resources</a>
+</section>
+
+<main class="container">
+
+  <section id="announcements">
+    <h2 class="section-title">Latest Announcements</h2>
+
+    <div class="notice">
+      <strong>Student Notice</strong>
+      <p>
+        Check this section regularly for class updates,
+        examination notices, assignments and academic events.
+      </p>
+      <small>Post new announcements here when available.</small>
+    </div>
+  </section>
+
+  <section id="resources">
+    <h2 class="section-title">Study Resources</h2>
+
+    <input class="search" id="search"
+      placeholder="Search study resources..."
+      oninput="filterCards()">
+
+    <div class="grid" id="resourceGrid">
+
+      <article class="card">
+        <div class="emoji">📊</div>
+        <h3>Monitoring and Evaluation</h3>
+        <p>Study materials on indicators, logical frameworks,
+        results-based management and evaluation.</p>
+      </article>
+
+      <article class="card">
+        <div class="emoji">🏥</div>
+        <h3>Health Systems Management</h3>
+        <p>Learning resources on health systems, planning,
+        leadership and service delivery.</p>
+      </article>
+
+      <article class="card">
+        <div class="emoji">📈</div>
+        <h3>Research Methods</h3>
+        <p>Resources on research design, sampling, data
+        collection, analysis and report writing.</p>
+      </article>
+
+      <article class="card">
+        <div class="emoji">💻</div>
+        <h3>Data Analysis</h3>
+        <p>Practice and learning materials for Excel,
+        SPSS, data management and visualization.</p>
+      </article>
+
+      <article class="card">
+        <div class="emoji">📝</div>
+        <h3>Assignments and Notes</h3>
+        <p>Organize class notes, revision materials and
+        assignment resources for students.</p>
+      </article>
+
+      <article class="card">
+        <div class="emoji">🔬</div>
+        <h3>Research Opportunities</h3>
+        <p>Share research ideas, proposal guidance and
+        relevant internship opportunities.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="links">
+    <h2 class="section-title">Useful University Links</h2>
+
+    <div class="grid">
+      <article class="card">
+        <h3>University Website</h3>
+        <p>Visit the official Mzumbe University website.</p>
+        <a href="https://www.mzumbe.ac.tz/"
+           target="_blank" rel="noopener noreferrer">
+          Visit University
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Student Academic Portal</h3>
+        <p>Access the university's academic registration system.</p>
+        <a href="https://aris.mzumbe.ac.tz/"
+           target="_blank" rel="noopener noreferrer">
+          Open ARIS
+        </a>
+      </article>
+
+      <article class="card">
+        <h3>Timetable Portal</h3>
+        <p>Check the university timetable portal.</p>
+        <a href="https://mutimetable.mzumbe.ac.tz/"
+           target="_blank" rel="noopener noreferrer">
+          View Timetable
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact and Contributions</h2>
+    <div class="card">
+      <p>
+        Students can use this platform to share learning
+        resources and academic information.
+      </p>
+      <p><strong>Platform:</strong> BHSME Students</p>
+      <p><strong>Administrator:</strong> Add administrator contact</p>
+      <p><strong>Email:</strong> Add official contact email</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>MZUMBE UNIVERSITY – BHSME STUDENTS</p>
+  <p>Student learning and information platform</p>
+  <p>&copy; <span id="year"></span></p>
+  <small>This is an independent student website, not an
+  official university portal.</small>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+function filterCards() {
+  const query = document.getElementById("search")
+    .value.toLowerCase();
+
+  document.querySelectorAll("#resourceGrid .card")
+    .forEach(function(card) {
+      card.style.display =
+        card.textContent.toLowerCase().includes(query)
+          ? ""
+          : "none";
+    });
+}
+</script>
+
+</body>
+</html>
